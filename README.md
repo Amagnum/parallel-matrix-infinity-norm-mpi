@@ -1,11 +1,10 @@
 # Calculating Matrix Infinity Norm MPI (Parallel Computing)
-A MPI program to calculates infinity norm of a matrix using row wise block-striped partitioning. 
+An MPI program to calculates infinity norm of a matrix using row-wise block-striped partitioning. 
 <p>
 
 <h3> What is infinity norm? </h3>
 
->A matrix norm is a number defined in terms of the entries of the matrix. The norm is a useful
-quantity which can give important information about a matrix.
+>A matrix norm is a number defined in terms of the entries of the matrix. The norm is a useful quantity which can give important information about a matrix.
 > The infinity norm of a matrix is defined to be the maximum of sums of absolute values of elements in a row, over all rows.<p>
 > ![alt inf norm](https://i.imgur.com/pHrwI2A.png)
 > <p> we sum the absolute values along each row and then take the biggest answer. <p>
