@@ -16,7 +16,9 @@ A simple MPI program to calculates infinity norm of a matrix using row-wise bloc
 The idea is that the matrix m x n is striped among p processors so that each processors stores m/p rows of the matrix. A typical column-wise and row-wise partitioning of the matrix
 
 ### Results:
-
+Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz <br>
+CPU(s):              8 <br>
+Thread(s) per core:  2 <br>
 ![alt results](https://github.com/Amagnum/Calculate-matrix-infinity-norm-mpi/blob/main/img/Matrix%20Inf.%20Norm.png)
 
 ### Compile & run the code:
