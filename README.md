@@ -1,5 +1,5 @@
 # Calculating Matrix Infinity Norm MPI (Parallel Computing)
-An MPI program to calculates infinity norm of a matrix using row-wise block-striped partitioning. 
+A simple MPI program to calculates infinity norm of a matrix using row-wise block-striped partitioning. 
 <p>
 
 <h3> What is infinity norm? </h3>
