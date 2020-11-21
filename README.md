@@ -15,5 +15,9 @@ A simple MPI program to calculates infinity norm of a matrix using row-wise bloc
 ### Distribution of data:
 The idea is that the matrix m x n is striped among p processors so that each processors stores m/p rows of the matrix. A typical column-wise and row-wise partitioning of the matrix
 
+### Results:
+
+![alt results](https://github.com/Amagnum/Calculate-matrix-infinity-norm-mpi/blob/main/img/Matrix%20Inf.%20Norm.png)
+
 ## REFERENCES
 1. Advanced Message Passing in MPI, Using MPI Datatypes with Opaque C++ Types, Paul Preney [pdf link](https://www.sharcnet.ca/help/images/f/fa/MPI_Datatypes_with_Opaque_Types_seminar_2014.pdf)
