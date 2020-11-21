@@ -19,5 +19,11 @@ The idea is that the matrix m x n is striped among p processors so that each pro
 
 ![alt results](https://github.com/Amagnum/Calculate-matrix-infinity-norm-mpi/blob/main/img/Matrix%20Inf.%20Norm.png)
 
+### Compile & run the code:
+```
+$ mpic++ main.cpp -o exc
+$ mpirun -np 4 exc < input.txt
+```
 ## REFERENCES
-1. Advanced Message Passing in MPI, Using MPI Datatypes with Opaque C++ Types, Paul Preney [pdf link](https://www.sharcnet.ca/help/images/f/fa/MPI_Datatypes_with_Opaque_Types_seminar_2014.pdf)
+1. Chandresh Kumar Maurya, Assisant professor, IIT Indore [link](https://chandu8542.github.io/)
+2. Advanced Message Passing in MPI, Using MPI Datatypes with Opaque C++ Types, Paul Preney [pdf link](https://www.sharcnet.ca/help/images/f/fa/MPI_Datatypes_with_Opaque_Types_seminar_2014.pdf)
