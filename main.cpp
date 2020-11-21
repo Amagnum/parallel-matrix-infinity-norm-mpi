@@ -1,7 +1,5 @@
 /*
-* CSE 180001001 
 * Adarsh Baghel
-* Assignment 4
 */
 
 #include <mpi.h>
@@ -12,6 +10,7 @@ double *createMatrix(int n,int m){
     double *matrix;
     matrix = new double[n*m];
 
+	// Adding random data into the matrix
     for (int h=0; h<n*m; h++) {
         matrix[h] = h+1;
     }
@@ -33,11 +32,17 @@ int main(int argc, char *argv[])
     int m=8,n=8;
     double *a;
     
-    if(pid==0){
+	// Process 0 is reading data from input
+    if(pid==0){ 
     	cin>>m>>n;
+	    
+	    // checking number of rows is a multiple of no. of processes used
         assert(m>=nProc);
+	    
         a = createMatrix(m,n);
-        if(false){
+        
+	// Take matrix from input file
+	if(false){
             a = new double[m*n];
         	for(int i=0; i<m; i++){
                 for(int j=0; j<n; j++)
@@ -58,13 +63,10 @@ int main(int argc, char *argv[])
 
     double rowSum=0;
     for(int i=0; i<m/nProc; i++){
-        //cout<<"PID :"<<pid<<" :";
         double sum=0;
         for(int j=0; j<n; j++){
-            //cout<<data[i][j]<<" ";
             sum+=abs(data[i][j]);
         }
-        //cout<<endl;
         rowSum=max(sum,rowSum);
     }
 
@@ -77,6 +79,8 @@ int main(int argc, char *argv[])
 	//#####################################
 
     mytime = MPI_Wtime() - mytime; /*get time just after work section*/
+	
+	// time calculation
     MPI_Reduce(&mytime, &maxtime, 1, MPI_DOUBLE,MPI_MAX, 0, MPI_COMM_WORLD);
 	MPI_Reduce(&mytime, &mintime, 1, MPI_DOUBLE, MPI_MIN, 0,MPI_COMM_WORLD);
 	MPI_Reduce(&mytime, &avgtime, 1, MPI_DOUBLE, MPI_SUM, 0,MPI_COMM_WORLD);
